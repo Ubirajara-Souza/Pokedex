@@ -1,0 +1,12 @@
+<input [(ngModel)]="nameFilter" type="text" id="poke-filter" placeholder="Search" maxlength="20"  />
+
+<img [src]="pokemonSprite" class="selected-pkm" src="" alt="" *ngIf="selectedPokemon != null">
+
+<ul class="poke-list">
+ <app-list-item *ngFor="let pokemon of pokemonList" [pokemon]="pokemon" (mouseenter)="selectPokemon(pokemon)"></app-list-item>
+</ul>
+
+<div>
+    <iframe width="300" height="100" src="https://www.youtube.com/embed/-PlAg8R9TG4" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
